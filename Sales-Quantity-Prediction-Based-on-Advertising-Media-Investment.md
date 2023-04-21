@@ -1,7 +1,6 @@
 Sales Quantity Prediction Based on Advertising Media Investment
 ================
 
-<br>
 
 ### Introduction:
 
@@ -41,7 +40,6 @@ radio, and newspaper advertising influenced sales of their product.
   quantity of product they could expect to sell given the amounts that
   they planned to invest in the advertising media.
 
-<br>
 
 ### Loading the Packages:
 
@@ -52,7 +50,6 @@ library(reshape2)
 library(scales)
 ```
 
-<br>
 
 ### Loading the Data:
 
@@ -61,7 +58,6 @@ library(scales)
 advertising_df <- read_csv("Advertising.csv")
 ```
 
-<br>
 
 ### Viewing the Data:
 
@@ -83,7 +79,6 @@ head(advertising_df)
 The independent variables were TV, radio, and newspaper. The dependent
 variable was sales.
 
-<br>
 
 The first column of the data frame was an index indicating the number
 assigned to each specific market. This column was removed, because it
@@ -94,7 +89,6 @@ was not used in the analysis.
 advertising_df <- advertising_df %>% select(TV, radio, newspaper, sales)
 ```
 
-<br>
 
 The “radio”, “newspaper”, and “sales” columns were then capitalized.
 
@@ -104,7 +98,6 @@ advertising_df <- advertising_df %>%
   rename(Radio = radio, Newspaper = newspaper, Sales = sales)
 ```
 
-<br>
 
 The advertising expense values for television, radio, and newspaper were
 provided in terms of thousands of dollars. In order to change the
@@ -124,7 +117,6 @@ advertising_df_v1$Radio <- advertising_df_v1$Radio * 1000
 advertising_df_v1$Newspaper <- advertising_df_v1$Newspaper * 1000
 ```
 
-<br>
 
 The values for quantity of product sold were provided in terms of
 thousands of units. In order to change the formatting, these values were
@@ -135,7 +127,6 @@ multiplied by 1,000.
 advertising_df_v1$Sales <- advertising_df_v1$Sales * 1000
 ```
 
-<br>
 
 ### Viewing the Structure of the Data:
 
@@ -150,7 +141,6 @@ glimpse(advertising_df_v1)
     ## $ Newspaper <dbl> 69200, 45100, 69300, 58500, 58400, 75000, 23500, 11600, 1000…
     ## $ Sales     <dbl> 22100, 10400, 9300, 18500, 12900, 7200, 11800, 13200, 4800, …
 
-<br>
 
 ### Summary Statistics:
 
@@ -171,7 +161,6 @@ summary(advertising_df_v1)
 - Television was the most expensive form of advertising for the company.
 - Radio was the least expensive form of advertising for the company.
 
-<br>
 
 The data frame was examined to determine if there were any duplicate
 rows.
@@ -185,7 +174,6 @@ nrow(advertising_df_v1[duplicated(advertising_df_v1), ])
 
 There were no duplicate rows found in the data frame.
 
-<br>
 
 The data frame was inspected for any missing values.
 
@@ -199,7 +187,6 @@ sapply(advertising_df_v1,function(x) sum(is.na(x)))
 
 There were no missing values in the data frame.
 
-<br>
 
 ## **Part 1:**
 
@@ -226,7 +213,8 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   theme(text = element_text(size = 12.50))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![a box plot of the amount spent on
+advertising by media](/images/1.png)
 
 #### **Findings:**
 
@@ -238,7 +226,6 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   resulted in ranges that were similar to each other, with the exception
   of two newspaper outlier values.
 
-<br>
 
 A numerical summary of the box plot was created.
 
@@ -264,7 +251,6 @@ summary(box_plot_df)
   **Radio** advertising. The mean values and the third quartile values
   displayed the same trend.
 
-<br>
 
 The outlier values for newspaper advertising were examined.
 
@@ -280,7 +266,6 @@ The newspaper advertising expense outlier values were \$114,000 and
 or it was just very expensive for the company to advertise in newspapers
 in those two particular markets.
 
-<br>
 
 A box plot was created to check if the “Sales” column had any outliers.
 
@@ -295,11 +280,10 @@ ggplot(aes(x = "", y = Sales), data = advertising_df_v1) +
   theme(text = element_text(size = 12.25))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![a box plot of the sales column](/images/2.png)
 
 There were no outliers present in the “Sales” column.
 
-<br>
 
 A numerical summary was created for the “Sales” column box plot.
 
@@ -320,7 +304,6 @@ The lowest quantity of units sold was 1,600 units and the highest
 quantity of units sold was 27,000 units. The average (mean) quantity of
 units sold was 14,022 units.
 
-<br>
 
 A bar chart was then created to analyze the total amount that the
 company spent on each advertising media.
@@ -344,12 +327,11 @@ box_plot_df_long %>%
                    breaks = seq(0, 32000000, by = 8000000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![a bar chart of the total amount spent on each advertising media](/images/3.png)
 
 The company invested most of its advertising budget in television,
 followed by newspaper, and then radio.
 
-<br>
 
 A pie chart was created to analyze the budget allocation percentage for
 the advertising media.
@@ -376,14 +358,13 @@ box_plot_df_long %>%
 theme(text = element_text(size = 20.00))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![a pie chart of the budget allocation](/images/4.png)
 
 Approximately three quarters of the advertising budget was allocated to
 television. The percentage of the budget invested in newspaper
 advertising and radio advertising were approximately equal to each
 other.
 
-<br>
 
 A correlation matrix was created to analyze the relationships between
 the advertising media and the quantity of product sold.
@@ -404,7 +385,7 @@ round(cor(advertising_df_v1), 2)
 corrplot(cor(advertising_df_v1))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![a correlation matrix to analyze the relationships between the variables](/images/5.png)
 
 #### **Findings:**
 
@@ -419,7 +400,6 @@ corrplot(cor(advertising_df_v1))
   correlated independent variables and to use the one that has the
   strongest correlation with the dependent variable.
 
-<br>
 
 A scatter plot was created to visualize the relationship between sales
 and the amount spent on television advertising.
@@ -439,12 +419,11 @@ ggplot(advertising_df_v1, aes(x = TV, y = Sales))+
                      breaks = seq(0, 300000, by = 60000)) # divided by 5
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![a scatter plot of the relationship between sales and the amount spent on television advertising](/images/6.png)
 
 There was a strong positive correlation between the quantity of product
 sold and the amount spent on television advertising for the product.
 
-<br>
 
 A scatter plot was created to visualize the relationship between sales
 and the amount spent on radio advertising.
@@ -464,12 +443,11 @@ ggplot(advertising_df_v1, aes(x = Radio, y = Sales))+
                      breaks = seq(0, 50000, by = 10000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![a scatter plot of the relationship between sales and the amount spent on radio advertising](/images/7.png)
 
 There was a moderate positive correlation between the quantity of
 product sold and the amount spent on radio advertising for the product.
 
-<br>
 
 A scatter plot was created to visualize the relationship between sales
 and the amount spent on newspaper advertising.
@@ -489,13 +467,12 @@ ggplot(advertising_df_v1, aes(x = Newspaper, y = Sales))+
                      breaks = seq(0, 115000, by = 23000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![a scatter plot of the relationship between sales and the amount spent on newspaper advertising](/images/8.png)
 
 There was a very weak positive correlation between the quantity of
 product sold and the amount spent on newspaper advertising for the
 product.
 
-<br>
 
 ## **Part 2:**
 
@@ -521,7 +498,6 @@ highest Adjusted R-squared and the lowest RMSE was then selected to
 provide the company with a sales quantity prediction that was based on
 the amount invested in advertising media.
 
-<br>
 
 To begin the model building process, the data frame was first split into
 a training set and a testing set.
@@ -545,7 +521,6 @@ fits data that was not used in training the model. For this project, 80%
 of the data was used to generate the model and the remaining 20% of the
 data was used to test the model.
 
-<br>
 
 From the Exploratory Data Analysis, it was observed that
 multicollinearity was present between the Radio and Newspaper features.
@@ -585,7 +560,6 @@ vif(vif_test)
   and the Radio feature was stronger than the correlation between Sales
   and the Newspaper feature.
 
-<br>
 
 The first Multiple Linear Regression model was built by using all the
 features.
@@ -597,7 +571,6 @@ set.seed(49)
 model1 <- lm(Sales~. , data = training_data)
 ```
 
-<br>
 
 The summary of the first model was analyzed.
 
@@ -698,7 +671,6 @@ summary(model1)
   statistically significant. There was a statistically significant
   relationship between the overall model and Sales.
 
-<br>
 
 The Root Mean Square Error (RMSE) metric was then calculated by using
 the model on the testing set. In Multiple Linear Regression, the RMSE is
@@ -720,7 +692,6 @@ sqrt(mean((testing_data$Sales - predict(model1, newdata = testing_data))^2))
 The testing set RMSE for this model was 1,500.6 units sold. The RMSE was
 rounded to 1,501 units sold.
 
-<br>
 
 A second Multiple Linear Regression model was built, using only the TV
 and Radio features.
@@ -732,7 +703,6 @@ set.seed(49)
 model2 <- lm(Sales~ TV + Radio, data = training_data)
 ```
 
-<br>
 
 The summary of the second model was analyzed.
 
@@ -790,7 +760,6 @@ summary(model2)
 - There was a statistically significant relationship between the overall
   model and Sales.
 
-<br>
 
 The RMSE was then calculated for the testing dataset:
 
@@ -804,7 +773,6 @@ sqrt(mean((testing_data$Sales - predict(model2, newdata = testing_data))^2))
 The testing set RMSE for this model was 1,488.663 units sold. The RMSE
 was rounded to 1,489 units sold.
 
-<br>
 
 ### Comparison of Multiple Linear Regression Models:
 
@@ -812,13 +780,11 @@ was rounded to 1,489 units sold.
 
 **Testing set RMSE for the first model:** 1,501
 
-<br>
 
 **Adjusted R-squared for the second model:** 89.45%
 
 **Testing set RMSE for the second model:** 1,489
 
-<br>
 
 When comparing several Multiple Linear Regression models, a higher
 Adjusted R-squared value is preferred. The Adjusted R-squared was higher
@@ -831,14 +797,12 @@ testing set RMSE value is preferred. The testing set RMSE was lower in
 the second model, indicating that the second model was able to generate
 more accurate predictions than the first model.
 
-<br>
 
 **Conclusion:** The second model was selected to provide the company
 with predictions of the quantity of units sold based on advertising
 investment, because the second model had a higher Adjusted R-squared and
 a lower testing set RMSE than the first model.
 
-<br>
 
 ### Using the Selected Model to Make Predictions with New Data:
 
@@ -881,7 +845,6 @@ sell an average of 3,453 units of their product.
   selection was based on which model had the highest Adjusted R-squared
   value and the lowest testing set RMSE value.
 
-<br>
 
 ### Recommendations:
 
