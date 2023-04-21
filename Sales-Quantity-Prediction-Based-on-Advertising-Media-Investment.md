@@ -1,7 +1,6 @@
 Sales Quantity Prediction Based on Advertising Media Investment
 ================
 
-<br>
 
 ### Introduction:
 
@@ -41,7 +40,6 @@ radio, and newspaper advertising influenced sales of their product.
   quantity of product they could expect to sell given the amounts that
   they planned to invest in the advertising media.
 
-<br>
 
 ### Loading the Packages:
 
@@ -52,7 +50,6 @@ library(reshape2)
 library(scales)
 ```
 
-<br>
 
 ### Loading the Data:
 
@@ -61,7 +58,6 @@ library(scales)
 advertising_df <- read_csv("Advertising.csv")
 ```
 
-<br>
 
 ### Viewing the Data:
 
@@ -83,7 +79,6 @@ head(advertising_df)
 The independent variables were TV, radio, and newspaper. The dependent
 variable was sales.
 
-<br>
 
 The first column of the data frame was an index indicating the number
 assigned to each specific market. This column was removed, because it
@@ -94,7 +89,6 @@ was not used in the analysis.
 advertising_df <- advertising_df %>% select(TV, radio, newspaper, sales)
 ```
 
-<br>
 
 The “radio”, “newspaper”, and “sales” columns were then capitalized.
 
@@ -104,7 +98,6 @@ advertising_df <- advertising_df %>%
   rename(Radio = radio, Newspaper = newspaper, Sales = sales)
 ```
 
-<br>
 
 The advertising expense values for television, radio, and newspaper were
 provided in terms of thousands of dollars. In order to change the
@@ -124,7 +117,6 @@ advertising_df_v1$Radio <- advertising_df_v1$Radio * 1000
 advertising_df_v1$Newspaper <- advertising_df_v1$Newspaper * 1000
 ```
 
-<br>
 
 The values for quantity of product sold were provided in terms of
 thousands of units. In order to change the formatting, these values were
@@ -135,7 +127,6 @@ multiplied by 1,000.
 advertising_df_v1$Sales <- advertising_df_v1$Sales * 1000
 ```
 
-<br>
 
 ### Viewing the Structure of the Data:
 
@@ -150,7 +141,6 @@ glimpse(advertising_df_v1)
     ## $ Newspaper <dbl> 69200, 45100, 69300, 58500, 58400, 75000, 23500, 11600, 1000…
     ## $ Sales     <dbl> 22100, 10400, 9300, 18500, 12900, 7200, 11800, 13200, 4800, …
 
-<br>
 
 ### Summary Statistics:
 
@@ -171,7 +161,6 @@ summary(advertising_df_v1)
 - Television was the most expensive form of advertising for the company.
 - Radio was the least expensive form of advertising for the company.
 
-<br>
 
 The data frame was examined to determine if there were any duplicate
 rows.
@@ -185,7 +174,6 @@ nrow(advertising_df_v1[duplicated(advertising_df_v1), ])
 
 There were no duplicate rows found in the data frame.
 
-<br>
 
 The data frame was inspected for any missing values.
 
@@ -199,7 +187,6 @@ sapply(advertising_df_v1,function(x) sum(is.na(x)))
 
 There were no missing values in the data frame.
 
-<br>
 
 ## **Part 1:**
 
@@ -226,7 +213,7 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   theme(text = element_text(size = 12.50))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![alt text](/images/1.png)
 
 #### **Findings:**
 
