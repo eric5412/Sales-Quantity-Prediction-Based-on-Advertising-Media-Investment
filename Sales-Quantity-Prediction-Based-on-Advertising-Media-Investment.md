@@ -212,8 +212,7 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   theme(text = element_text(size = 12.50))
 ```
 
-![a box plot of the amount spent on
-advertising by media](/images/1.png)
+![a box plot of the amount spent on advertising by media](/images/1.png)
 
 #### **Findings:**
 
