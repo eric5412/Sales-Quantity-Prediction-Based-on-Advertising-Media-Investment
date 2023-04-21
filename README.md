@@ -20,7 +20,7 @@ box_plot_df_long %>%
                    breaks = seq(0, 32000000, by = 8000000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![alt text](/images/1.png)
 
 The company invested most of its advertising budget in television,
 followed by newspaper, and then radio.
