@@ -155,7 +155,6 @@ summary(advertising_df_v1)
     ##  Mean   :147043   Mean   :23264   Mean   : 30554   Mean   :14022  
     ##  3rd Qu.:218825   3rd Qu.:36525   3rd Qu.: 45100   3rd Qu.:17400  
     ##  Max.   :296400   Max.   :49600   Max.   :114000   Max.   :27000
-
 #### **Findings:**
 
 - Television was the most expensive form of advertising for the company.
