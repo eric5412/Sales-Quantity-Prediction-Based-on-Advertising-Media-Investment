@@ -42,7 +42,6 @@ radio, and newspaper advertising influenced sales of their product.
 
 
 ### Loading the Packages:
-
 ``` r
 library(tidyverse)
 library(corrplot)
