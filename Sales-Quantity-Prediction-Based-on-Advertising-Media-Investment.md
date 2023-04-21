@@ -50,7 +50,6 @@ library(reshape2)
 library(scales)
 ```
 <br>
-
 ### Loading the Data:
 
 ``` r
