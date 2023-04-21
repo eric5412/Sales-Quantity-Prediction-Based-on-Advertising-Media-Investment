@@ -3,7 +3,7 @@ Sales Quantity Prediction Based on Advertising Media Investment
 
 
 ### Introduction:
-<br>
+
 Data was analyzed for a company that invested in television, radio, and
 newspaper advertising. The scope of this project was to provide an
 overview of the amounts that were spent in these different media and
