@@ -857,4 +857,4 @@ sell an average of 3,453 units of their product.
   estimate of the expected quantity of units sold, based on the amount
   that was budgeted for the advertising media.
 
-<br> <br> <br> <br> <br> <br>
+<br> <br> <br>
