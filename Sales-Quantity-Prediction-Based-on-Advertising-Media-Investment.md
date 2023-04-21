@@ -213,7 +213,7 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   theme(text = element_text(size = 12.50))
 ```
 
-![alt text](/images/1.png)
+![alt text]()
 
 #### **Findings:**
 
