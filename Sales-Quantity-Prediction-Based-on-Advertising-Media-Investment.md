@@ -52,6 +52,7 @@ library(scales)
 
 ### Loading the Data:
 
+
 ``` r
 # To load the data and to save it to a data frame called advertising_df:
 advertising_df <- read_csv("Advertising.csv")
