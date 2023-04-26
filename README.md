@@ -56,9 +56,12 @@ radio, and newspaper advertising influenced sales of their product.
 
 <br>
 
-A bar chart was then created to analyze the total amount that the
-company spent on each advertising media.
+![A bar chart of the total amount spent on each advertising media](/images/3.png)
 
+The company invested most of its advertising budget in television,
+followed by newspaper, and then radio.
+
+<br>
 
 
 
