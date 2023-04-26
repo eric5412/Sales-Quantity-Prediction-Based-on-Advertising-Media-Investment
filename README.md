@@ -134,4 +134,40 @@ a lower testing set RMSE than the first model.
 
 <br>
 
+### Key Takeaways:
+
+- Television was the most expensive form of advertising for the company.
+
+- Radio was the least expensive form of advertising for the company.
+
+- Television had the greatest range in the amount spent by the company
+  for advertising across their markets.
+
+- Approximately three quarters of the advertising budget was allocated
+  to television.
+
+- The lowest quantity of units sold was 1,600 units and the highest
+  quantity of units sold was 27,000 units. The average (mean) quantity
+  of units sold was 14,022 units.
+
+- The best performing Multiple Linear Regression machine learning model
+  was selected to provide the company with predictions of the quantity
+  of units sold based on advertising investment. The criteria for model
+  selection was based on which model had the highest Adjusted R-squared
+  value and the lowest testing set RMSE value.
+
+<br>
+
+### Recommendations:
+
+- Since sales were very weakly correlated with newspaper advertising,
+  and newspaper advertising was more expensive than radio advertising,
+  it is recommended that the company focuses on using the television and
+  radio media.
+
+- The company can use the selected machine learning model to obtain an
+  estimate of the expected quantity of units sold, based on the amount
+  that was budgeted for the advertising media.
+
+<br> <br> <br> <br> <br> <br>
 
