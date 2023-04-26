@@ -1,7 +1,6 @@
 Sales Quantity Prediction Based on Advertising Media Investment
 ================
 
-<br>
 
 ### Introduction:
 
@@ -42,4 +41,20 @@ radio, and newspaper advertising influenced sales of their product.
   they planned to invest in the advertising media.
 
 <br>
+
+![A box plot of the advertising expense by media](/images/1.png)
+
+#### **Findings:**
+
+- Television had the greatest range in the amount spent by the company
+  for advertising across their markets.
+- Advertising on television was considerably more expensive than the
+  other two media.
+- The newspaper advertising expense and radio advertising expense
+  resulted in ranges that were similar to each other, with the exception
+  of two newspaper outlier values.
+
+<br>
+
+
 
