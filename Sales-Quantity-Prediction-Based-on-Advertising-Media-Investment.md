@@ -226,7 +226,7 @@ ggplot(box_plot_df_long, aes(variable, value)) +
   theme(text = element_text(size = 12.50))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-8-1.png)<!-- -->
+![A box plot of the advertising expense by media](/images/1.png)
 
 #### **Findings:**
 
@@ -296,7 +296,7 @@ ggplot(aes(x = "", y = Sales), data = advertising_df_v1) +
   theme(text = element_text(size = 12.25))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-11-1.png)<!-- -->
+![A box plot of the sales column](/images/2.png)
 
 There were no outliers present in the “Sales” column.
 
@@ -345,7 +345,7 @@ box_plot_df_long %>%
                    breaks = seq(0, 32000000, by = 8000000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+![A bar chart of the total amount spent on each advertising media](/images/3.png)
 
 The company invested most of its advertising budget in television,
 followed by newspaper, and then radio.
@@ -377,7 +377,7 @@ box_plot_df_long %>%
 theme(text = element_text(size = 20.00))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-14-1.png)<!-- -->
+![A pie chart of the budget allocation](/images/4.png)
 
 Approximately three quarters of the advertising budget was allocated to
 television. The percentage of the budget that was invested in newspaper
@@ -405,7 +405,7 @@ round(cor(advertising_df_v1), 2)
 corrplot(cor(advertising_df_v1))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-15-1.png)<!-- -->
+![A correlation matrix to analyze the relationships between the variables](/images/5.png)
 
 #### **Findings:**
 
@@ -440,7 +440,7 @@ ggplot(advertising_df_v1, aes(x = TV, y = Sales))+
                      breaks = seq(0, 300000, by = 60000)) # divided by 5
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-16-1.png)<!-- -->
+![A scatter plot of the relationship between sales and the amount spent on television advertising](/images/6.png)
 
 There was a strong positive correlation between the quantity of product
 sold and the amount spent on television advertising for the product.
@@ -465,7 +465,7 @@ ggplot(advertising_df_v1, aes(x = Radio, y = Sales))+
                      breaks = seq(0, 50000, by = 10000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-17-1.png)<!-- -->
+![A scatter plot of the relationship between sales and the amount spent on radio advertising](/images/7.png)
 
 There was a moderate positive correlation between the quantity of
 product sold and the amount spent on radio advertising for the product.
@@ -490,7 +490,7 @@ ggplot(advertising_df_v1, aes(x = Newspaper, y = Sales))+
                      breaks = seq(0, 115000, by = 23000))
 ```
 
-![](Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment_files/figure-gfm/unnamed-chunk-18-1.png)<!-- -->
+![A scatter plot of the relationship between sales and the amount spent on newspaper advertising](/images/8.png)
 
 There was a very weak positive correlation between the quantity of
 product sold and the amount spent on newspaper advertising for the
