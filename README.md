@@ -56,5 +56,9 @@ radio, and newspaper advertising influenced sales of their product.
 
 <br>
 
+A bar chart was then created to analyze the total amount that the
+company spent on each advertising media.
+
+
 
 
