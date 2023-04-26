@@ -100,4 +100,38 @@ the amount invested in advertising media.
 
 <br>
 
+### Comparison of Multiple Linear Regression Models:
+
+**Adjusted R-squared for the first model:** 89.39%
+
+**Testing set RMSE for the first model:** 1,501
+
+<br>
+
+**Adjusted R-squared for the second model:** 89.45%
+
+**Testing set RMSE for the second model:** 1,489
+
+<br>
+
+When comparing several Multiple Linear Regression models, a higher
+Adjusted R-squared value is preferred. The Adjusted R-squared was higher
+in the second model, indicating that the second model was able to
+explain more of the variance in the target variable. The second model
+was able to fit the data better than the first model.
+
+When comparing several Multiple Linear Regression models, a lower
+testing set RMSE value is preferred. The testing set RMSE was lower in
+the second model, indicating that the second model was able to generate
+more accurate predictions than the first model.
+
+<br>
+
+**Conclusion:** The second model was selected to provide the company
+with predictions of the quantity of units sold based on advertising
+investment, because the second model had a higher Adjusted R-squared and
+a lower testing set RMSE than the first model.
+
+<br>
+
 
