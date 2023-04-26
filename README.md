@@ -72,4 +72,11 @@ was invested in radio advertising.
 
 <br>
 
+![A scatter plot of the relationship between sales and the amount spent on television advertising](/images/6.png)
+
+There was a strong positive correlation between the quantity of product
+sold and the amount spent on television advertising for the product.
+
+<br>
+
 
