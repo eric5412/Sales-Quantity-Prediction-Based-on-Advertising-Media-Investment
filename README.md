@@ -79,4 +79,25 @@ sold and the amount spent on television advertising for the product.
 
 <br>
 
+In machine learning, the independent variables are also called
+“features” and the dependent variable is also called the “target
+variable”. Multiple Linear Regression is a machine learning algorithm
+that is used to analyze the relationship between features and the target
+variable. The algorithm uses two or more features when predicting the
+outcome of the target variable.
+
+For this project, the Multiple Linear Regression machine learning
+algorithm was used to build models to predict the company’s sales
+quantity given the different amounts that the company had invested in
+television, radio, and newspaper advertising.
+
+The dataset was split into a training set and a testing set. The training set was used for model building and the testing set was used for model validation. Two Multiple Linear Regression machine learning models were built and
+compared. The models were then evaluated by using the Adjusted R-squared
+metric and the testing set Root Mean Square Error (RMSE) metric. The model with the
+highest Adjusted R-squared and the lowest testing set RMSE was then selected to
+provide the company with a sales quantity prediction that was based on
+the amount invested in advertising media.
+
+<br>
+
 
