@@ -63,5 +63,13 @@ followed by newspaper, and then radio.
 
 <br>
 
+![A pie chart of the budget allocation](/images/4.png)
+
+Approximately three quarters of the advertising budget was allocated to
+television. The percentage of the budget that was invested in newspaper
+advertising was approximately equal to the percentage of the budget that
+was invested in radio advertising.
+
+<br>
 
 
