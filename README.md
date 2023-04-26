@@ -169,5 +169,8 @@ a lower testing set RMSE than the first model.
   estimate of the expected quantity of units sold, based on the amount
   that was budgeted for the advertising media.
 
-<br> <br> <br> <br> <br> <br>
+<br>
 
+Please click [here]( https://github.com/eric5412/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment/blob/main/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment.md) for the entire project.
+
+<br>
