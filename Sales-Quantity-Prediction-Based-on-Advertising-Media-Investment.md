@@ -541,7 +541,7 @@ testing_data <- subset(advertising_df_v1, split == "FALSE")
 The training set was used for constructing the model. The testing set
 was used for validating the model and for making predictions. Model
 validation involves using a testing set to evaluate how well a model
-fits data that was not used in training the model. For this project, 80%
+fits data that was not used in building the model. For this project, 80%
 of the data was used to generate the model and the remaining 20% of the
 data was used to test the model.
 
