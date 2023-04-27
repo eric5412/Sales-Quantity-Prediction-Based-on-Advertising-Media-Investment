@@ -173,6 +173,6 @@ a lower testing set RMSE than the first model.
 
 <br>
 
-Please click [here]( https://github.com/eric5412/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment/blob/main/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment.md) for the entire project.
+**Please click [here]( https://github.com/eric5412/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment/blob/main/Sales-Quantity-Prediction-Based-on-Advertising-Media-Investment.md) for the entire project.**
 
 <br>
