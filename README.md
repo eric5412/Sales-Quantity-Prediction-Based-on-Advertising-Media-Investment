@@ -42,6 +42,7 @@ radio, and newspaper advertising influenced sales of their product.
 
 <br>
 
+### Overview of Part 1:
 ![A box plot of the advertising expense by media](/images/1.png)
 
 #### **Findings:**
@@ -79,6 +80,7 @@ sold and the amount spent on television advertising for the product.
 
 <br>
 
+### Overview of Part 2:
 In machine learning, the independent variables are also called
 “features” and the dependent variable is also called the “target
 variable”. Multiple Linear Regression is a machine learning algorithm
