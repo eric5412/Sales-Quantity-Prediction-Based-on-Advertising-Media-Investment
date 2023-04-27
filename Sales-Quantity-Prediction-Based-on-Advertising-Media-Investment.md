@@ -514,7 +514,7 @@ algorithm was used to build models to predict the company’s sales
 quantity given the different amounts that the company had invested in
 television, radio, and newspaper advertising.
 
-The dataset was split into a training set and a testing set. The training set was used for model building and the testing set was used for model validation. Two Multiple Linear Regression machine learning models were built and
+The data frame was split into a training set and a testing set. The training set was used for model building and the testing set was used for model validation. Two Multiple Linear Regression machine learning models were built and
 compared. The models were then evaluated by using the Adjusted R-squared
 metric and the testing set Root Mean Square Error (RMSE) metric. The model with the
 highest Adjusted R-squared and the lowest testing set RMSE was then selected to
